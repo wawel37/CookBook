@@ -1,57 +1,147 @@
 from django.shortcuts import render
 from django.http import JsonResponse, HttpResponse
+
 import json
 from RestApi.models import *
 
 def review(request, *args, **kwargs):
     if request.method == 'GET':
-        print(Review.objects.all())
-        return HttpResponse('test GET na review')
-    if request.method == 'POST':
-        toSend = Review(text="siema siemanko, gadam se z fanka", userName = "wykuriweci", rating=5)
-        toSend.save()
-        return HttpResponse('test GET na review')
+        try:
+            queryParams = dict(request.GET.items())
+            result = list(Review.objects.filter(**queryParams).values())
+            return JsonResponse({
+                "data": result,
+                "error": 0
+            })
+        except Exception as e:
+            return JsonResponse({
+                "error": str(e)
+            })
+    if request.method == 'POST':  
+        try:
+            body_unicode = request.body.decode('utf-8')
+            body = json.loads(body_unicode) 
+            toSend = Review(**body['data'])
+            toSend.save()
+            return JsonResponse({
+                "data": body['data'],
+                "error": 0
+            })
+        except Exception as e:
+            return JsonResponse({
+                "error": str(e)
+            })
 
 def post(request, *arg, **kwargs):
     if request.method == 'GET':
-        print(Post.objects.all())
-        return HttpResponse('test GET na post')
+        try:
+            queryParams = dict(request.GET.items())
+            result = list(Post.objects.filter(**queryParams).values())
+            print(result)
+            return JsonResponse({
+                "data": result,
+                "error": 0
+            })
+        except Exception as e:
+            return JsonResponse({
+                "error": str(e)
+            })
     if request.method == 'POST':
-        toSend = Post(img="testimg.com", text="test text for post", userName="slazak", title="tytul")
-        toSend.save()
-        return HttpResponse('test GET na post')
+        try:
+            body_unicode = request.body.decode('utf-8')
+            body = json.loads(body_unicode)
+            toSend = Post(**body['data'])
+            toSend.save()
+            return JsonResponse({
+                "data": body['data'],
+                "error": 0
+            })
+        except Exception as e:
+            return JsonResponse({
+                "error": str(e)
+            })
+
 
 def availableIngredient(request, *arg, **kwargs):
     if request.method == 'GET':
-        print(AvailableIngredient.objects.all())
-        return HttpResponse('test GET na availableIngredient')
+        try:
+            queryParams = dict(request.GET.items())
+            result = list(AvailableIngredient.objects.filter(**queryParams).values())
+            return JsonResponse({
+                "data": result
+            })
+        except Exception as e:
+            return JsonResponse({
+                "error": str(e)
+            })
     if request.method == 'POST':
-        toSend = AvailableIngredient(name = "jajko", unitType = "jajka")
-        toSend.save()
-        return HttpResponse('test POST na availableIngredient')
+        try:
+            body_unicode = request.body.decode('utf-8')
+            body = json.loads(body_unicode)
+            toSend = AvailableIngredient(**body['data'])
+            toSend.save()
+            return JsonResponse({
+                "data": body['data'],
+                "error": 0
+            })
+        except Exception as e:
+            return JsonResponse({
+                "error": str(e)
+            })
 
 def recipe(request, *arg, **kwargs):
     if request.method == 'GET':
-        print(Recipe.objects.all())
-        return HttpResponse('test GET na Recipe')
+        try:
+            queryParams = dict(request.GET.items())
+            result = list(Recipe.objects.filter(**queryParams).values())
+            return JsonResponse({
+                "data": result
+            })
+        except Exception as e:
+            return JsonResponse({
+                "error": str(e)
+            })
+            
     if request.method == 'POST':
-        toSend = Recipe(description = "Pierwszy przepis", ingredients = [{"name": "Chlep","amount":100},{"name": "Maslo","amount":5}])
-        toSend.save()
-        return HttpResponse('test POST na Recipe')
+        try:
+            body_unicode = request.body.decode('utf-8')
+            body = json.loads(body_unicode)
+            toSend = Recipe(**body['data'])
+            toSend.save()
+            return JsonResponse({
+                "data": body['data'],
+                "error": 0
+            })
+        except Exception as e:
+            return JsonResponse({
+                "error": str(e)
+            })
 
 def dish(request, *arg, **kwargs):
     if request.method == 'GET':
-        print(Dish.objects.all())
-        return HttpResponse('test GET na dish')
+        try:
+            queryParams = dict(request.GET.items())    
+            result = list(Dish.objects.filter(**queryParams).values())
+            
+            return JsonResponse({
+                "data": result
+            })
+        except Exception as e:
+            return JsonResponse({
+                "error": str(e)
+            })
     if request.method == 'POST':
-        toSend = Dish(
-            name="test dish name", 
-            author="test dish author", 
-            types = [{"name": "obiad"}, {"name": "zupa"}],
-            recipeID= 1, 
-            reviews = [{"name":"Marek"}, {"name":"MeneleTV"}] , 
-            img = "test.img" 
-            )
-        toSend.save()
-        return HttpResponse('test POST na dish')
+        try:
+            body_unicode = request.body.decode('utf-8')
+            body = json.loads(body_unicode)
+            toSend = Dish(**body['data'])
+            toSend.save()
+            return JsonResponse({
+                "data": body['data'],
+                "error": 0
+            })
+        except Exception as e:
+            return JsonResponse({
+                "error": str(e)
+            })
 
