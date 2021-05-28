@@ -1,7 +1,7 @@
 import react, {useState, useEffect} from 'react';
 import './Posts.css';
 import axios from 'axios';
-
+import Card from 'react-bootstrap/Card'
 
 export default function Posts(){
 
@@ -24,16 +24,30 @@ export default function Posts(){
     }, []);
 
     return (
-        <div className="Posts">
-            posty:
+        <div className="Posts" style={{ width: "100%"}}>
             {posts.map((post, i) => {
                 return (
+                    <div key = {i} classname = "post_wrapper">
+	                    <Card className = "post">
+                            <Card.Header className="title_wrapper">{post.title}</Card.Header>	
+	                    	
+                            <Card.Body>
+                                <Card.Text className = "post_content_wrapper" text = 'primary'>{post.text}</Card.Text>
+	                    	</Card.Body>
+                            
+                            <Card.Footer>
+                                <small className="text-muted">{post.userName}</small>
+                            </Card.Footer>
+	                    </Card>
+                    </div>
+                    /*
                     <div key={i} className="post">
                         <p>{post.userName}</p>
                         <h1>{post.title}</h1>
                         <h1>{post.text}</h1>
                         <img src={post.img}></img>
                     </div>
+                    */
                 )
             })}
         </div>

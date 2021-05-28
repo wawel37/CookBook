@@ -1,0 +1,44 @@
+.Navigation{
+    height: 90px;
+}
+.nav_wrapper{
+    background-color: rgb(192, 144, 55);
+}
+.navItem{
+    color: white;
+}
+
+.navbar-default .navbar-brand {
+    color: #d6d6d6;
+}
+.nav_brand{
+    border: solid rgb(243, 209, 114) 1px;
+    border-radius: 8px;
+}
+.side_but{
+    display: inline;
+    width: 25%;
+    height: 80%;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-right: 5px;
+    border-radius: 8px;
+    background: rgb(151, 24, 24);
+    font-size: 18px;
+}
+.nav-link{
+    color: white;
+}
+
+.ml-auto{
+    width: 30%; 
+    display: flex;
+    flex-wrap: row;
+    margin-right: 3%;
+}
+
+.button_wrapper{
+    width: 100%;
+    position:flex;
+}

@@ -1,6 +1,21 @@
 from djongo import models
 from django import forms
 
+#Embedded models:
+class Ingredient(models.Model):
+    name = models.CharField(max_length=500)
+    amount = models.CharField(max_length=100)
+    
+    class Meta:
+        abstract = True
+
+class IngredientForm(forms.ModelForm):
+    class Meta:
+        model = Ingredient
+        fields = (
+            'name', 'amount'
+        )
+
 class TextElement(models.Model):
     name = models.CharField(max_length=50)
     
@@ -14,11 +29,12 @@ class TextForm(forms.ModelForm):
             'name',
         )
 
+#Models
+
 class Review(models.Model):
     text = models.CharField(max_length=1000)
     userName = models.CharField(max_length=50)
     rating = models.IntegerField()
-
 
 class Dish(models.Model):
     name = models.CharField(max_length=40)
@@ -27,39 +43,16 @@ class Dish(models.Model):
         model_container=TextElement,
         model_form_class=TextForm
     )
-    recipeID = models.IntegerField()
-    reviews = models.ArrayReferenceField(
-        to=Review,
-        on_delete=models.CASCADE,
-    )
-    img = models.CharField(max_length=100)
-
-
-class Ingredient(models.Model):
-    name = models.CharField(max_length=500)
-    amount = models.IntegerField()
-    
-    class Meta:
-        abstract = True
-
-class IngredientForm(forms.ModelForm):
-    class Meta:
-        model = Ingredient
-        fields = (
-            'name', 'amount'
-        )
-
-class Recipe(models.Model):
     description = models.CharField(max_length=1000)
     Ingredients = models.ArrayField(
         model_container=Ingredient,
         model_form_class=IngredientForm
     )
-    
-
-class AvailableIngredient(models.Model):
-    name = models.CharField(max_length=40)
-    unitType = models.CharField(max_length=20)
+    reviews = models.ArrayReferenceField(
+        to=Review,
+        on_delete=models.CASCADE,
+    )
+    img = models.CharField(max_length=100)
 
 class Post(models.Model):
     text = models.CharField(max_length=1000)

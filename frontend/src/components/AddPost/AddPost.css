@@ -1,0 +1,11 @@
+.AddPost{
+    width: 50%;
+    margin: auto;
+}
+textarea{
+    width: 100%;
+}
+p{
+    font-size: 30px;
+    font-weight: bold;
+}

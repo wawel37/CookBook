@@ -1,0 +1,29 @@
+.Posts{
+    width:100%;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+
+.post{
+    margin-bottom:50px;
+}
+
+.post_wrapper{
+    text-align: center;
+}
+
+.post_wrapper{
+    width: 100%;
+    margin: 10px;
+    margin-bottom:50px;
+}
+
+p .post_content_wrapper{
+    font-size: 26px;
+    font-weight: normal;
+    font-style: normal;
+}
