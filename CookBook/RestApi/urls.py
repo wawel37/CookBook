@@ -7,5 +7,6 @@ urlpatterns = [
     path('ingredient/', views.availableIngredient, name='ingredient'),
     path('dish/', views.dish, name='dish'),
     path('dish_of_type/', views.dishOfType, name='dish_of_type'),
-    path('types/', views.availableTypes, name='types')
+    path('types/', views.availableTypes, name='types'),
+    path('dish_with_ingredient/', views.dishWithIngredients, name='dish_with_ingredient')
 ]

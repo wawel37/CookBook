@@ -22,7 +22,7 @@ def review(request, *args, **kwargs):
             print(e)
             return JsonResponse({
                 "error": str(e)
-            }, status=401)
+            }, status=400)
     if request.method == 'POST':  
         try:
             body_unicode = request.body.decode('utf-8')
@@ -37,7 +37,7 @@ def review(request, *args, **kwargs):
             print(e)
             return JsonResponse({
                 "error": str(e)
-            }, status=401)
+            }, status=400)
 
 def post(request, *arg, **kwargs):
     if request.method == 'GET':
@@ -53,7 +53,7 @@ def post(request, *arg, **kwargs):
             print(e)
             return JsonResponse({
                 "error": str(e)
-            }, status=401)
+            }, status=400)
     if request.method == 'POST':
         try:
             body_unicode = request.body.decode('utf-8')
@@ -68,7 +68,7 @@ def post(request, *arg, **kwargs):
             print(e)
             return JsonResponse({
                 "error": str(e)
-            }, status=401)
+            }, status=400)
 
 
 def availableIngredient(request, *arg, **kwargs):
@@ -88,7 +88,7 @@ def availableIngredient(request, *arg, **kwargs):
             print(e)
             return JsonResponse({
                 "error": str(e)
-            }, status=401)
+            }, status=400)
 
 def dishOfType(request, *arg, **krwargs):
     if request.method == "GET":
@@ -120,7 +120,7 @@ def dishOfType(request, *arg, **krwargs):
             print(e)
             return JsonResponse({
                 "error": str(e)
-            }, status=401)
+            }, status=400)
 
 def dish(request, *arg, **kwargs):
     if request.method == 'GET':
@@ -136,7 +136,7 @@ def dish(request, *arg, **kwargs):
             print(e)
             return JsonResponse({
                 "error": str(e)
-            }, status=401)
+            }, status=400)
             
     if request.method == 'POST':
         try:
@@ -166,7 +166,7 @@ def dish(request, *arg, **kwargs):
             print(e)
             return JsonResponse({
                 "error": str(e)
-            }, status=401)
+            }, status=400)
 
 def availableTypes(request, *arg, **kwargs):
     if request.method == 'GET':
@@ -183,9 +183,29 @@ def availableTypes(request, *arg, **kwargs):
             print(e)
             return JsonResponse({
                 "error": str(e)
-            }, status=401)
+            }, status=400)
 
+def dishWithIngredients(request, *arg, **kwargs):
+    if request.method == 'GET':
+        try:
+            queryParams = dict(request.GET.items())
+            ingredients = queryParams['ingredients'].split(",")
+            ingredients.pop()
 
+            result = list(Dish.objects.filter().values())
+            result = populateReviews(result)
+
+            result = list(filter(lambda x: filterDish(x, ingredients), result))
+
+            return JsonResponse({
+                "data": result
+            })
+
+        except Exception as e:
+            print(e)
+            return JsonResponse({
+                "error": str(e)
+            }, status=400)
 
 
 def populateReviews(data):
@@ -201,3 +221,9 @@ def populateReviews(data):
         result[index].pop('reviews_id')
         result[index]['reviews'] = resultArray
     return result
+
+def filterDish(dish, ingredients):
+    for ingredient in dish['Ingredients']:
+        if ingredient['name'] not in ingredients:
+            return False
+    return True
