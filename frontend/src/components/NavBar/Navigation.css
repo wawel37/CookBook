@@ -2,6 +2,7 @@
     height: 90px;
 }
 .nav_wrapper{
+    width: 100%;
     background-color: rgb(192, 144, 55);
 }
 .navItem{
@@ -17,7 +18,7 @@
 }
 .side_but{
     display: inline;
-    width: 25%;
+    width: 35%;
     height: 80%;
     text-align: center;
     justify-content: center;
@@ -25,14 +26,15 @@
     margin-right: 5px;
     border-radius: 8px;
     background: rgb(151, 24, 24);
-    font-size: 18px;
+    font-size: 1em;
 }
+
 .nav-link{
     color: white;
 }
 
 .ml-auto{
-    width: 30%; 
+    width: 50%; 
     display: flex;
     flex-wrap: row;
     margin-right: 3%;

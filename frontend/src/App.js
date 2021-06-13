@@ -6,6 +6,7 @@ import AddRecipe from './components/AddRecipe/AddRecipe'
 import AddPost from './components/AddPost/AddPost';
 import DishDetails from './components/DishDetails/DishDetails'
 import Fridge from './components/Fridge/Fridge';
+import DishCard from './components/DishCard/DishCard';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

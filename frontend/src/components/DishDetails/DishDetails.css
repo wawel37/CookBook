@@ -1,0 +1,18 @@
+.dish_det_wrapper{
+    width: 50%;
+    margin: auto;
+}
+.types_body{
+    width: 100%;
+    display: inline-block;
+}
+.type{
+    display: inline-block;
+    float: left;
+    padding-left: 2%;
+}
+.card_body{
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+}
