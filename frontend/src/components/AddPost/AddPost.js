@@ -15,7 +15,6 @@ export default function AddPost(){
     const handleSubmit = async (e) =>{
         e.preventDefault();
         const URL = 'http://localhost:8000/api/post/';
-
         const toSend = {
             "data":{
                 "text": formText,

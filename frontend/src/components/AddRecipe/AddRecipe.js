@@ -146,7 +146,7 @@ export default function AddRecipe(){
                 </Form.Group>
 
                 <Button className="submitButton" variant="warning" type="submit">
-                    Send new post
+                    Send new recipe
                 </Button>
             </Form>
         </div>

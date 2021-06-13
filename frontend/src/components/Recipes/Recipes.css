@@ -1,14 +1,17 @@
-.Recipes{
+.recipes_wrapper{
     display: flex;
-    position: relative;
-    left: 0;
-    margin-left: 0;
     align-items: flex-start;
-    width: 100%;
+    width: 90%;
+    padding: 2%;
     flex-wrap: wrap;
+    margin: auto;
     justify-content: space-around;
 }
+.dishcard_wrapper{
+    width: 40%;
+    margin-bottom: 3%;
+}
 
-.recipe_wrapper{
-    width: 100%;
+.dishcard_wrapper img{
+    height: 350px;
 }

@@ -26,9 +26,20 @@ def review(request, *args, **kwargs):
     if request.method == 'POST':  
         try:
             body_unicode = request.body.decode('utf-8')
-            body = json.loads(body_unicode) 
+            body = json.loads(body_unicode)
+
+            dishID = ''
+            if 'dishID' in body['data']:
+                dishID = body['data'].pop('dishID') 
+
             toSend = Review(**body['data'])
             toSend.save()
+
+            if 'dishID' != '':
+                dish = Dish.objects.get(id = dishID)
+                dish.reviews.add(toSend)
+
+        
             return JsonResponse({
                 "data": body['data'],
                 "error": 0
@@ -44,7 +55,6 @@ def post(request, *arg, **kwargs):
         try:
             queryParams = dict(request.GET.items())
             result = list(Post.objects.filter(**queryParams).values())
-            print(result)
             return JsonResponse({
                 "data": result,
                 "error": 0
@@ -190,7 +200,8 @@ def dishWithIngredients(request, *arg, **kwargs):
         try:
             queryParams = dict(request.GET.items())
             ingredients = queryParams['ingredients'].split(",")
-            ingredients.pop()
+            if ingredients[-1] == "":
+                ingredients.pop()
 
             result = list(Dish.objects.filter().values())
             result = populateReviews(result)

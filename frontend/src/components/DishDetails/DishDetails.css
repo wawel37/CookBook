@@ -14,5 +14,24 @@
 .card_body{
     justify-content: center;
     margin: auto;
+    
+}
+.DishDetails{
+    margin-bottom: 10%;
+}
+.dish_name{
+    font-size: 2em;
     text-align: center;
+}
+.dish_author{
+    font-size: 1.5em;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.dish_desc{
+    font-size: 1.2em;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.dish_ingre{
+    font-size: 1.2em;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }

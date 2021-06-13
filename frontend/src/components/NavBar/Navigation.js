@@ -23,7 +23,7 @@ export default function Navigation(){
                         <NavItem className = "side_but"><Link className="nav-link" to="/posts"><span className="navItem">Posts</span></Link> </NavItem> 
                         <NavItem className = "side_but"><Link className="nav-link" to="/addrecipe"><span className="navItem">Add Recipe</span></Link> </NavItem> 
                         <NavItem className = "side_but"><Link className="nav-link" to="/addpost"><span className="navItem">Add Post</span></Link> </NavItem>
-                        <NavItem className = "side_but"><Link className="nav-link" to="/fridge"><span className="navItem">Your Fridge</span></Link> </NavItem>
+                        <NavItem className = "side_but"><Link className="nav-link" to="/fridge"><span className="navItem">Fridge Search</span></Link> </NavItem>
                     </div>
                 </Nav>
             </Navbar>

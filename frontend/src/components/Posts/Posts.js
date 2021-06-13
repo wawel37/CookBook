@@ -28,9 +28,9 @@ export default function Posts(){
             {posts.map((post, i) => {
                 return (
                     <div key = {i} classname = "post_wrapper">
-	                    <Card className = "post">
+	                    <Card className = "post_card">
                             <Card.Header className="title_wrapper">{post.title}</Card.Header>	
-	                    	
+                            <Card.Img className="post_img" variant="top" src={post.img} />
                             <Card.Body>
                                 <Card.Text className = "post_content_wrapper" text = 'primary'>{post.text}</Card.Text>
 	                    	</Card.Body>
