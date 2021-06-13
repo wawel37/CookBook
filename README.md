@@ -247,11 +247,15 @@ Where error returns an error code signifying the success of failure of the reque
 React components:   
 * AddPost
 * AddRecipe
+* DishCard
 * DishDetails
 * Fridge
 * NavBar
 * Posts
 * Recipes
+* ReviewCard
+* RevievFrom
+
 
 Frontend is only for presentation purposes, our main goal in this project was to learn how to use mongoDB and set backend in Django.
 
