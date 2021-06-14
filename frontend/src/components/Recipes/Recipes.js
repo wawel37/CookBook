@@ -19,8 +19,8 @@ export default function Recipes(){
 
     const [availableTypes, setAvailableTypes] = useState([]);
     const [recipes, setRecipes] = useState([]);
-    const [selectedType, setSelectedType] = useState([null]);
-    const [URL, setURL] = useState(["http://127.0.0.1:8000/api/dish_of_type?types="]);
+    const [selectedType, setSelectedType] = useState("");
+    const [URL, setURL] = useState("http://127.0.0.1:8000/api/dish_of_type?types=");
 
     useEffect(async() => {
         let mounted = true;
@@ -51,16 +51,22 @@ export default function Recipes(){
         return result;
     }
 
-    const mainFun = (name) => {
-        setSelectedType(name);
-        setURL(getQueryURL());
+    const mainFun = async (name) => {
+        const tempURL = 'http://127.0.0.1:8000/api/dish_of_type?types=' + name;
+        try {
+            const response = await axios.get(tempURL);
+            console.log(response.data);
+            setRecipes(response.data.data);
+        } catch (error) {
+            alert(error);
+        }
     }
 
     return (
         <div className = "Recipes">
             <div className = "form_wrapper">
                 <Form className="myForm">
-                <Form.Label className="myLabel">Choose Type</Form.Label>
+                    <Form.Label className="myLabel">Choose Type</Form.Label>
                     <select name="type" onChange={(e) => mainFun(e.target.value)}>
                         {availableTypes.map((type, k) =>{
                             return <option value={type} key={k}>{type.toUpperCase()}</option>
@@ -70,7 +76,7 @@ export default function Recipes(){
             </div>
             
             <div className="recipes_wrapper">
-                {recipes.map((recipe, i) => {
+                {recipes && recipes.map((recipe, i) => {
                     return ( 
                         <div className = "dishcard_wrapper" key = {i}>             
                             <DishCard  recipe={recipe}/>

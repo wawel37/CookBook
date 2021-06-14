@@ -14,7 +14,6 @@ export default function Posts(){
         };
         axios.get(URL)
         .then(result => {
-            console.log(result.data.data);
             setPosts(result.data.data);
         })
         .catch(err => {
@@ -27,7 +26,7 @@ export default function Posts(){
         <div className="Posts" style={{ width: "100%"}}>
             {posts.map((post, i) => {
                 return (
-                    <div key = {i} classname = "post_wrapper">
+                    <div key = {i} className = "post_wrapper">
 	                    <Card className = "post_card">
                             <Card.Header className="title_wrapper">{post.title}</Card.Header>	
                             <Card.Img className="post_img" variant="top" src={post.img} />
