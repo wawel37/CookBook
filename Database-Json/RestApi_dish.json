@@ -1,0 +1,276 @@
+[{
+  "_id": {
+    "$oid": "60b1259a486024d806e129e2"
+  },
+  "id": 3,
+  "name": "pizza B)",
+  "author": "tobito",
+  "types": [
+    {
+      "name": "indyjskie"
+    },
+    {
+      "name": "kebab"
+    },
+    {
+      "name": "pizza"
+    }
+  ],
+  "description": "Dobre danie jest",
+  "Ingredients": [
+    {
+      "name": "jajko",
+      "amount": "2szt."
+    },
+    {
+      "name": "mleko",
+      "amount": "2l"
+    }
+  ],
+  "reviews_id": [
+    76,
+    77,
+    82
+  ],
+  "img": "https://d1uz88p17r663j.cloudfront.net/resized/2020_06_10T16_18_54_image.ashx_zdjecie_944_531.jpg_fileID_232468"
+},{
+  "_id": {
+    "$oid": "60c5e3686d75226dcdc11d1b"
+  },
+  "id": 4,
+  "name": "Jajka Sadzone z szynką",
+  "author": "Adrian",
+  "types": [
+    {
+      "name": "Śniadanie"
+    }
+  ],
+  "description": "Patelnie rozgrzać na mocnym ogniu, wrzucić 1 łyżeczkę masła, włożyć naszą szynkę na patelnie - smażyć do momentu aż otrzymamy coś na wzór bekonu. Następnie szynkę zdejmujemy i dodajemy resztę masła. 3 jajka wbijamy na patelnie, solimy, pieprzymy według uznania. Jajka smażymy pod przykrywką. Można podać z majonezem.",
+  "Ingredients": [
+    {
+      "name": "Szynka cienka",
+      "amount": "3 szt"
+    },
+    {
+      "name": "Jajka",
+      "amount": "3 szt"
+    },
+    {
+      "name": "Masło",
+      "amount": "2 tspn"
+    }
+  ],
+  "reviews_id": [],
+  "img": "https://prostepesto.pl/wp-content/uploads/2020/10/jaja-sadzone.jpg"
+},{
+  "_id": {
+    "$oid": "60c5e3d96d75226dcdc11d1c"
+  },
+  "id": 5,
+  "name": "Spaghetti Bolognese",
+  "author": "Kuba",
+  "types": [
+    {
+      "name": "Makarony"
+    },
+    {
+      "name": "Obiad"
+    },
+    {
+      "name": "Włoskie"
+    }
+  ],
+  "description": "Umyj poszatkuj cebulę, marchewkę umyj, obierz, pokrój w kostkę. Cebulę podsmaż na oleju, dodaj mięso mielone i marchew. Mięso podsmażyć. Całość dusić pod przykryciem na niskiej mocy palnika ok. 20 minut. Ugotuj makaron spaghetti. Podaj na talerzach.",
+  "Ingredients": [
+    {
+      "name": "Mięso mielone",
+      "amount": "300g"
+    },
+    {
+      "name": "Cebula",
+      "amount": "1"
+    },
+    {
+      "name": "Czosnek",
+      "amount": "2 ząbki"
+    },
+    {
+      "name": "Marchewka",
+      "amount": "1"
+    },
+    {
+      "name": "Przecier pomidorowy",
+      "amount": "3 tbsp"
+    },
+    {
+      "name": "Makaron spaghetti",
+      "amount": "300g"
+    }
+  ],
+  "reviews_id": [],
+  "img": "https://ocdn.eu/pulscms-transforms/1/iGxk9kpTURBXy8wYTQ2YmY1M2NlYTVlMTM2NWU2MjdiMmRjODExZTUxZi5qcGeTlQMAH80D6M0CMpMJpjA2NTMzYgaTBc0EsM0CdoGhMAE/spaghetti-puttanesca.jpg"
+},{
+  "_id": {
+    "$oid": "60c5e5396d75226dcdc11d1f"
+  },
+  "id": 6,
+  "name": "Skrzydełka w słodko-ostrej glazurze",
+  "author": "Tobito",
+  "types": [
+    {
+      "name": "American"
+    },
+    {
+      "name": "Spicy"
+    },
+    {
+      "name": "Fast Food"
+    },
+    {
+      "name": "Rekawica jisaku"
+    }
+  ],
+  "description": "Skrzydełka umyć, pokroić na mniejsze cześci. Przyprawić papryką oraz papryką wędzoną a później obtoczyć w proszku do pieczenia. Piec w 200 stopniach przez godzine, co 20 minut przekładając. Na końcu wymieszać w mieszaninie miodu oraz srirachy. Smacznego (●'◡'●)",
+  "Ingredients": [
+    {
+      "name": "Skrzydelka",
+      "amount": "1 kg"
+    },
+    {
+      "name": "Miodek",
+      "amount": "5 tbsp"
+    },
+    {
+      "name": "Sriracha",
+      "amount": "5 tbsp"
+    },
+    {
+      "name": "Papryka",
+      "amount": "2 tbsp"
+    },
+    {
+      "name": "Proszek do pieczenia",
+      "amount": "3 tbsp"
+    },
+    {
+      "name": "Papryka wędzona",
+      "amount": "2 tbsp"
+    }
+  ],
+  "reviews_id": [
+    79
+  ],
+  "img": "https://i.ytimg.com/vi/7aKWvE7-jHQ/maxresdefault.jpg"
+},{
+  "_id": {
+    "$oid": "60c5f2486d75226dcdc11d20"
+  },
+  "id": 7,
+  "name": "Naleśniki",
+  "author": "Kuba",
+  "types": [
+    {
+      "name": "Smażone"
+    },
+    {
+      "name": "Deser"
+    }
+  ],
+  "description": "Wsypać mąkę do miski, dodać jajka, mleko, szczyptę soli. Ewentulanie można dodać łyżkę cukru. Zmiksować na gładkie ciasto. Dodać olej roślinny i razem zmiksować. Smażyć na dobrze rozgrzanej patelni. Przewrócić na drugą stronę gdy będzie ładnie zrumieniony.",
+  "Ingredients": [
+    {
+      "name": "Jajka",
+      "amount": "2"
+    },
+    {
+      "name": "Olej",
+      "amount": "3 tspn"
+    },
+    {
+      "name": "Mleko",
+      "amount": "1 szklanka"
+    },
+    {
+      "name": "Mąka",
+      "amount": "3/4 szklanki"
+    }
+  ],
+  "reviews_id": [
+    80
+  ],
+  "img": "https://d3iamf8ydd24h9.cloudfront.net/pictures/articles/2019/08/1066536-v-1500x1500.jpg"
+},{
+  "_id": {
+    "$oid": "60c5f2496d75226dcdc11d21"
+  },
+  "id": 8,
+  "name": "CzosnDog",
+  "author": "Adi",
+  "types": [
+    {
+      "name": "American"
+    },
+    {
+      "name": "Easy"
+    },
+    {
+      "name": "Dinner"
+    },
+    {
+      "name": "Jojo Bot"
+    }
+  ],
+  "description": "Bagietkę czosnkową z biedry przecinamy w poprzek tak aby wsadzić tam dwie parówki. Całość wsadzamy do piekarnika na 10 minut 220 stopni. Po około 6 minutach dodajemy ser. Po wyciągnięciu nakładamy ogórki i plastrach, posypujemy cebulką prażoną oraz dodajemy sosy np. musztarda + ketchup",
+  "Ingredients": [
+    {
+      "name": "parówka",
+      "amount": "2 szt"
+    },
+    {
+      "name": "bagietka czosnkowa",
+      "amount": "1 szt"
+    },
+    {
+      "name": "ser",
+      "amount": "5 plastrów"
+    },
+    {
+      "name": "prażona cebula",
+      "amount": ""
+    },
+    {
+      "name": "ogórki kiszone",
+      "amount": "1"
+    }
+  ],
+  "reviews_id": [
+    78
+  ],
+  "img": "https://www.nerdycook.in/wp-content/uploads/2020/06/XXczd30.jpg"
+},{
+  "_id": {
+    "$oid": "60c7a149e757a89880c4db74"
+  },
+  "id": 9,
+  "name": "Chicken nuggets z McDonalda z sosem słodko-kwaśnym",
+  "author": "Juleczka",
+  "types": [
+    {
+      "name": "Delicious food"
+    },
+    {
+      "name": "Dream of my life"
+    }
+  ],
+  "description": "1. Jedziesz do maczka\n2. Jesz",
+  "Ingredients": [
+    {
+      "name": "Kurczaczki",
+      "amount": "6 szt."
+    }
+  ],
+  "reviews_id": [
+    81
+  ],
+  "img": "https://www.kindpng.com/picc/m/670-6706168_mcdonalds-20er-nuggets-mcdonalds-chicken-mcnuggets-hd-png.png"
+}]

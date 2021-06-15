@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "60c5e3f36d75226dcdc11d1d"
+  },
+  "id": 4,
+  "text": "Jak dobrze wiemy gotowanie jajka moze byc proste, lecz nie zawsze. Ostatnio przydażyło mi się je przegotować co sprawiło że było twarde jak skała :( Bardzo mnie to zezłościło ",
+  "userName": "Tobito",
+  "title": "Gotowanie jajka",
+  "img": "https://i.kym-cdn.com/photos/images/newsfeed/001/857/750/4ab.png"
+},{
+  "_id": {
+    "$oid": "60c5e45d6d75226dcdc11d1e"
+  },
+  "id": 5,
+  "text": "TOTALNA SZTOLNIA! JESZCZE NIGDY NIE JADŁEM TAKICH PYSZNYCH JAJEK!!! ŻÓŁTKO WYLEWA SIĘ PO PRZECIĘCIU JAJKA I ŚWIETNIE SMAKUJE Z BEKONIKIEM (づ￣ 3￣)づ",
+  "userName": "Adi",
+  "title": "Jajka Sadzone z Szynką ",
+  "img": "https://prostepesto.pl/wp-content/uploads/2020/10/jaja-sadzone.jpg"
+},{
+  "_id": {
+    "$oid": "60c5f2f46d75226dcdc11d22"
+  },
+  "id": 6,
+  "text": "Janek mój synek powiedział że dobre i zjadł całe a jest niejadkiem",
+  "userName": "Adi",
+  "title": "Czosndog bardzo smaczny",
+  "img": "https://bombakaloryczna.pl/wp-content/uploads/2020/06/czosndog-bez-bagietki-czosnkowej-640x480.jpg"
+},{
+  "_id": {
+    "$oid": "60c5f4ddc1ce4f173bda8275"
+  },
+  "id": 7,
+  "text": "Ostatnio jak jadłem było tak niedobre że aż przewróciłem stół (╯°□°）╯︵ ┻━┻",
+  "userName": "Random",
+  "title": "Tragedia",
+  "img": "https://reneeroedererdotcom.files.wordpress.com/2017/04/img_7345.jpg"
+}]

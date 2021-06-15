@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "60c5f5f08c12e09b6670a8da"
+  },
+  "id": 76,
+  "text": "bardzo dobra pizzuska",
+  "userName": "tobito",
+  "rating": 1
+},{
+  "_id": {
+    "$oid": "60c5f7168c12e09b6670a8db"
+  },
+  "id": 77,
+  "text": "oj jest bardzo dobra",
+  "userName": "tobito",
+  "rating": 4
+},{
+  "_id": {
+    "$oid": "60c5f7858c12e09b6670a8dc"
+  },
+  "id": 78,
+  "text": "Ale sztolnia :OOOOOOO",
+  "userName": "Tobito",
+  "rating": 5
+},{
+  "_id": {
+    "$oid": "60c5fbc98c12e09b6670a8dd"
+  },
+  "id": 79,
+  "text": "No całkiem całkiem tylko Tobysek zjadł wszystkie i się nie posiedzielił! ",
+  "userName": "Adi",
+  "rating": 2
+},{
+  "_id": {
+    "$oid": "60c5fbd58c12e09b6670a8de"
+  },
+  "id": 80,
+  "text": "Dobre, całkiem dobre - polecam",
+  "userName": "Mc Łowicz",
+  "rating": 4
+},{
+  "_id": {
+    "$oid": "60c7a1cce757a89880c4db75"
+  },
+  "id": 81,
+  "text": "Sposób na wszelkie smutki, polecam",
+  "userName": "Juleczka",
+  "rating": 5
+},{
+  "_id": {
+    "$oid": "60c88dfd9f17f848b7c7ffc4"
+  },
+  "id": 82,
+  "text": "bardzo dobra pizza",
+  "userName": "Adrian",
+  "rating": 5
+}]
